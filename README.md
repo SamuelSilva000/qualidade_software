@@ -21,9 +21,10 @@ Este é um projeto educacional em Java usando Spring Boot e Maven para ensinar c
 
 ## Conexão ao Banco de Dados
 
-Este projeto utiliza um banco de dados MongoDB hospedado remotamente para fins educacionais:
+Este projeto utiliza um banco de dados MongoDB hospedado remotamente para fins educacionais. Para rodar o projeto, configure a variável de ambiente `MONGODB_URI` com sua própria URI do MongoDB Atlas:
+
 ```
-mongodb://mongo:XdnCdkmKwzJiKHiryTDzdgRGOxzNQYtA@crossover.proxy.rlwy.net:24258
+mongodb+srv://seu_usuario:sua_senha@cluster0.xxxxx.mongodb.net/qualidade_software?retryWrites=true&w=majority&appName=Cluster0
 ```
 
 ## Começando
@@ -81,7 +82,10 @@ java -jar target/educational-quality-project-0.0.1-SNAPSHOT.jar
 - Para executar os testes: `mvn test`
 - Para empacotar o projeto: `mvn package`
 - Para limpar os arquivos gerados: `mvn clean`
+- Para compilar, testar e empacotar: `mvn clean install`
 - Para executar a aplicação: `mvn spring-boot:run`
+
+**Observação:** O comando `mvn build` não existe no Maven. Utilize `mvn clean install` ou `mvn package` para construir o projeto.
 
 ### Acessando a Aplicação
 
